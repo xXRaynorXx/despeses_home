@@ -70,6 +70,11 @@ function setDefaultDates() {
 function setupEventListeners() {
     document.getElementById('expense-form').addEventListener('submit', saveExpense);
     document.getElementById('btn-cancel').addEventListener('click', resetForm);
+    // Escoltador per al nou botó d'eliminar del formulari
+    document.getElementById('btn-form-delete').addEventListener('click', () => {
+        const id = document.getElementById('expense-id').value;
+        if (id) window.deleteExpense(parseInt(id));
+    });
     document.getElementById('filter-year').addEventListener('change', loadData);
     document.getElementById('chart-concept').addEventListener('change', updateChartData);
     document.getElementById('chart-start-date').addEventListener('change', updateChartData);
@@ -195,26 +200,32 @@ window.deleteExpense = function(id) {
 };
 
 window.editExpense = function(id) {
-    db.transaction([STORE_NAME], 'readonly')
-      .objectStore(STORE_NAME).get(id).onsuccess = (e) => {
+    db.transaction([STORE_NAME], 'readonly').objectStore(STORE_NAME).get(id).onsuccess = (e) => {
         const item = e.target.result;
         document.getElementById('expense-id').value = item.id;
         document.getElementById('concept').value = item.concept;
         document.getElementById('amount').value = item.amount;
         document.getElementById('date').value = item.date;
         document.getElementById('notes').value = item.notes || '';
+        
         document.getElementById('form-title').textContent = "Modificar Despesa ✏️";
-        document.getElementById('btn-submit').textContent = "Actualitzar";
+        document.getElementById('btn-submit').textContent = "Actualitzar Cambis";
+        
+        // Mostrem els botons de cancel·lar i eliminar
         document.getElementById('btn-cancel').style.display = 'block';
+        document.getElementById('btn-form-delete').style.display = 'block';
     };
-};
+}
 
 function resetForm() {
     document.getElementById('expense-form').reset();
     document.getElementById('expense-id').value = '';
     document.getElementById('form-title').textContent = "Registrar Despesa";
     document.getElementById('btn-submit').textContent = "Guardar Despesa";
+    
+    // Amaguem els botons auxiliars
     document.getElementById('btn-cancel').style.display = 'none';
+    document.getElementById('btn-form-delete').style.display = 'none';
     setDefaultDates();
 }
 
