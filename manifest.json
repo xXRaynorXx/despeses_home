@@ -1,0 +1,17 @@
+{
+  "short_name": "GastosHogar",
+  "name": "Control de Gastos",
+  "start_url": "./index.html",
+  "background_color": "#f8fafc",
+  "theme_color": "#4f46e5",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://flaticon.com",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}

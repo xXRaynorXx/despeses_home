@@ -1,0 +1,60 @@
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --text: #0f172a;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --danger: #ef4444;
+    --success: #22c55e;
+    --warning: #f59e0b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+body { background-color: var(--background); color: var(--text); padding: 15px; }
+.container { max-width: 1200px; margin: 0 auto; }
+header { margin-bottom: 25px; text-align: center; }
+h1 { color: var(--primary); font-size: 1.8rem; }
+h2 { margin-bottom: 15px; font-size: 1.2rem; }
+
+.grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 992px) { .grid { grid-template-columns: 1fr 2fr; } }
+
+.card { background: var(--surface); padding: 20px; border-radius: 12px; border: 1px solid var(--border); }
+.form-group { margin-bottom: 12px; }
+label { display: block; margin-bottom: 4px; font-size: 0.85rem; color: var(--text-light); }
+input, select, textarea { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; }
+textarea { height: 60px; }
+
+button { width: 100%; padding: 10px; background: var(--primary); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+button:hover { background: var(--primary-hover); }
+.btn-secondary { background: var(--text-light); margin-top: 5px; }
+
+.flex-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px; }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+.stat-box { background: var(--background); padding: 12px; border-radius: 8px; text-align: center; border: 1px solid var(--border); }
+.stat-box span { font-size: 1.3rem; font-weight: bold; color: var(--primary); }
+
+.table-container { overflow-x: auto; max-height: 350px; border: 1px solid var(--border); border-radius: 8px; }
+.excel-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.excel-table th, .excel-table td { padding: 8px 5px; border: 1px solid var(--border); text-align: center; }
+.excel-table th { background: var(--background); font-weight: bold; }
+.excel-table td:first-child { text-align: left; font-weight: bold; background: var(--background); position: sticky; left: 0; z-index: 5; }
+
+.excel-amount { color: var(--text); cursor: pointer; }
+.excel-amount:hover { background: #e0e7ff; }
+.excel-empty { color: #cbd5e1; }
+
+.actions-cell { display: flex; gap: 5px; }
+.btn-action { padding: 4px 8px; font-size: 0.75rem; width: auto; border: none; color: white; border-radius: 4px; cursor: pointer; }
+.btn-edit { background: var(--warning); }
+.btn-delete { background: var(--danger); }
+.notes-text { font-size: 0.8rem; color: var(--text-light); display: block; font-style: italic; }
+
+.native-chart-container { display: flex; align-items: flex-end; gap: 15px; height: 240px; padding: 20px 10px; background: var(--background); border-radius: 8px; border: 1px solid var(--border); overflow-x: auto; margin-top: 15px; }
+.chart-bar-wrapper { flex: 1; min-width: 65px; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
+.chart-bar-value { font-size: 0.75rem; font-weight: bold; margin-bottom: 4px; }
+.chart-bar-fill { width: 100%; background: var(--primary); border-radius: 4px 4px 0 0; min-height: 2px; }
+.chart-bar-label { font-size: 0.75rem; color: var(--text-light); margin-top: 6px; }
+.chart-bar-inc { font-size: 0.7rem; font-weight: bold; margin-top: 2px; }
