@@ -1,11 +1,12 @@
-const CACHE_NAME = 'gestion-menu-v2';
+const CACHE_NAME = 'gastos-hogar-v7';
+const CACHE_NAME = 'gastos-hogar-v8';
 const ASSETS = [
   './',
   './index.html',
   './style.css',
   './app.js',
   './manifest.json',
-  './supermercado.png'
+  './icona.png'
 ];
 
 self.addEventListener('install', (e) => {
