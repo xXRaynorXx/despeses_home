@@ -1,6 +1,6 @@
 {
-  "short_name": "GastosHogar",
-  "name": "Control de Gastos",
+  "short_name": "Gestionmenu",
+  "name": "Gestion de menus",
   "start_url": "./index.html",
   "background_color": "#f8fafc",
   "theme_color": "#4f46e5",
@@ -8,13 +8,13 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "./icona.png",
+      "src": "./supermercado.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "./icona.png",
+      "src": "./supermercado.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
