@@ -1,5 +1,4 @@
-const CACHE_NAME = 'gastos-hogar-v7';
-const CACHE_NAME = 'gastos-hogar-v8';
+const CACHE_NAME = 'gastos-hogar-v9';
 const ASSETS = [
   './',
   './index.html',
