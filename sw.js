@@ -1,10 +1,11 @@
-const CACHE_NAME = 'gastos-hogar-v6';
+const CACHE_NAME = 'gastos-hogar-v7';
 const ASSETS = [
   './',
   './index.html',
   './style.css',
   './app.js',
-  './manifest.json'
+  './manifest.json',
+  './icona.png'
 ];
 
 self.addEventListener('install', (e) => {
